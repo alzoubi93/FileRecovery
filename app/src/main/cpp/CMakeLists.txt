@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project("recovery")
+add_library(recovery SHARED carver.cpp)
+find_library(log-lib log)
+target_link_libraries(recovery ${log-lib})
